@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Generator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Recipe<span style="color:#007BFF;">Generator</span></h1>
+    </header>
+
+    <!-- <h2 style="color: #333; font-size: 20px;">Please enter what you want to eat in the input below:</h2>
+    <h3 style="color: #333; font-size: 20px;">(e.g. Salmon with a salads, chicken breast with mash potaots)</h3>
+    <h3 style="color: #333; font-size: 20px;">(It's gonna generate recipes with your input for a maximum of 5 recipe by request )</h3> -->
+    <div class="container">
+        <form action="/generate" method="post">
+            <div class="form-group">
+                <input type="text" name="meal" placeholder="Enter meal type" required>
+                <button type="button" onclick="addMeal()">Add another meal type</button>
+            </div>
+            <button id="submit-button" type="submit">Generate Recipes</button>
+        </form>
+        <script src="/static/script.js"></script>
+    </div>
+    <footer>
+        <p>&copy; 2023 Recipe Generator</p>
+    </footer>
+</body>
+</html>
+
+

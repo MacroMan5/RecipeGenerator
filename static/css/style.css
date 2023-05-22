@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 65px;
+    margin: 0;
+    background-color: #eee;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.recipe {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    background-color: #80bdff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4d92ff;
+}
+
+#groceryListContainer {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#groceryListContainer pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #FFD700;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group button {
+    margin-left: 20px;
+    padding: 10px 20px;
+}

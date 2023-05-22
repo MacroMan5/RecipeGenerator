@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Generator - Recipe</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Recipe<span style="color:#007BFF;">Generator</span></h1>
+    </header>
+    <div class="container">
+        {% for recipe in recipes %}
+            <div class="recipe">
+                <h2>{{ recipe['name'] }}</h2>
+                <h3>Serving Size: {{ recipe['serving_size'] }}</h3>
+                <h4>Ingredients</h4>
+                <ul>
+                {% for ingredient in recipe['ingredients'] %}
+                    <li class="ingredient" data-recipe-id="{{ loop.index }}">{{ ingredient }}</li>
+                {% endfor %}
+                </ul>
+                <h4>Instructions</h4>
+                <ol>
+                {% for instruction in recipe['instructions'] %}
+                    <li>{{ instruction }}</li>
+                {% endfor %}
+                </ol>
+            </div>
+        {% endfor %}
+
+        <button onclick="generateGroceryList()">Generate Grocery List</button>
+        <div id="groceryListContainer"></div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Recipe Generator</p>
+    </footer>
+    <script>
+        var recipes = JSON.parse('{{ recipes | tojson | safe }}');
+    </script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
+
+

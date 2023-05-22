@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body.>
+    <div class="container">
+        <h1>Grocery List</h1>
+        <ul>
+        {% for ingredient, quantity in grocery_list.items() %}
+            <li>{{ ingredient }}: {{ quantity }}</li>
+        {% endfor %}
+        </ul>
+        <button onclick="location.href='/'">Generate another set of recipes</button>
+    </div>
+</body>
+</html>
+
